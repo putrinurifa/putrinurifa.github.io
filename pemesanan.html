@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!-- PUTRI NURIFA FIRDAUSIA -->
+  <!-- TI 2G -->
+
+<html>
+<head>
+ <title>PEMESANAN</title>
+ <link href="stylePemesana.css" rel="stylesheet">
+   <script type="text/javascript">
+  function total() {
+   var nama = document.getElementById('nama').value;
+   var harga =  parseInt(document.getElementById('harga').value);
+   var jumlah_beli =  parseInt(document.getElementById('jumlah').value);
+   var pembayaran =  parseInt(document.getElementById('bayar').value);
+   
+    if (k = member){
+    if(jumlah_beli > 3){
+        var diskon = (10/100) * harga ;
+        var harga_beli = (harga - diskon) * jumlah_beli;
+         document.getElementById('total').value = harga_beli;
+     }
+     else if(jumlah_beli >= 2){
+        var diskon = (7/100) * harga ;
+        var harga_beli = (harga - diskon) * jumlah_beli;
+         document.getElementById('total').value = harga_beli;
+     }else if(jumlah_beli == 1 ){
+        var diskon = (5/100) * harga ;
+        var harga_beli = (harga - diskon) * jumlah_beli;
+         document.getElementById('total').value = harga_beli;
+    }
+}else if (k = member){
+    
+    if(jumlah_beli > 5){
+        var diskon = (5/100) * harga ;
+        var harga_beli = (harga - diskon) * jumlah_beli;
+         document.getElementById('total').value = harga_beli;
+     }
+     else if(jumlah_beli > 3){
+        var diskon = jumlah_beli * harga ;
+        var harga_beli = diskon * (5/100);
+        var a = diskon - harga_beli;
+         document.getElementById('total').value = harga_beli;
+     }else if(jumlah_beli ==1 ){
+        var diskon = (5/100) * harga ;
+        var harga_beli = (harga - diskon) * jumlah_beli;
+         document.getElementById('total').value = harga_beli;
+    }
+}
+}
+  </script>
+ <style>
+  .tengah{
+            background-position:center;
+            width:auto;
+            height:auto;
+        }
+  table{
+    padding-top: 150px;
+   margin:auto;
+  }
+ </style>
+</head>
+<body class="tengah">
+    <h3 align = "center"> PEMESANAN</h3>
+ <div>
+  <table>
+   <tr>    
+    <th align="left">ID PEMBELI</th>
+    <th><input type="text"  id="nama" onchange="total()" ></th>
+   </tr>
+   <tr>    
+    <th align="left">NAMA PEMBELI</th>
+    <th><input type="text"  id="nama" onchange="total()" ></th>
+   </tr>
+
+   <tr>    
+    <th align="left">JENIS MAKAN</th>
+    <th align="left"><td><select id="status" onchange="total()">
+            <option>GEPREK SAMBEL GOWANG RP 10000</option>
+            <option>GEPREK SAMBEL BAWANG RP 15000</option>
+            <option>NASI GEPREK SAMBEL MATAH RP 13000</option>
+            <option>MIE GEPREK SAMBEL COWEK RP 16000</option>
+            <option>AYAM SUWIR SAMBEL KOREK RP 18000</option>
+    </select></th>
+   </tr>
+   
+   <tr>    
+    <th align="left">HARGA</th>
+    <th><input type="number"  id="harga" onchange="total()"></th>
+   </tr>
+
+   <tr>    
+    <th align="left">JUMLAH PEMBELIAN</th>    
+    <th><input type="number" id="jumlah"  value="0" onchange="total()"></th>
+   </tr>
+   <th align="left" id ="k">STATUS PEMBELI</th>    
+    <th align="left"><input type="radio" id="member"  value="0" onchange="total()">MEMBER</th>
+    <th align="left"><input type="radio" id="nonmember"  value="0" onchange="total()">NON MEMBER</th>
+   </tr>
+
+   
+   <tr>    
+    <th align="left">BAYAR</th>
+    <th><input type="text" style="background: white" id="total" disabled ></th>
+   </tr>
+
+   <tr>    
+    <th align="left"></th>    
+    <th><input type="number" id="bayar" onchange="total()"></th>
+   </tr>
+   
+   </tr>
+  </table>
+  <nav class="nav-home d-none d-lg-block">
+        <ul>
+          <li><a href="index.html"><img src="back.png" style="width: 100px; height: 100px " align="center"></a></li>
+          <li><a href="Biodata.html"><img src="woman.png" style="width: 100px; height: 100px " align="center"></a></li>
+          <li><a href="menu.html"><img src="menu.png" style="width: 100px; height: 110px " align="center"></a></li>
+          <li><a href="profil.html"><img src="shop.png" style="width: 100px; height: 100px " align="center"></a></li>
+        </ul>
+
+          <footer>&copy; 2020 | Design By Putri Nurifa Firdausia</footer>
+      </nav>
+
+ </div>
+</body>
+</html>

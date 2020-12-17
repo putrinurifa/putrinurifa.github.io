@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- PUTRI NURIFA FIRDAUSIA -->
+  <!-- TI 2G -->
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+	<title>PROFIL</title>
+	<link href="styleProfil.css" rel="stylesheet">
+  <script src="jquery-3.5.1.js"></script>
+  <script>
+    var i=0;
+    $(document).ready(function(){
+      $('.slidertitle, #slider img').hide();
+      showNextImage();
+      setInterval('showNextImage()', 3000);
+    });
+
+    function showNextImage(){
+      i++;
+      $('#sliderImage' + i).appendTo('#slider').fadeIn(1100).delay(1100).fadeOut(1100);
+      $('#title' + i).appendTo('#slider').fadeIn(1100).delay(1100).fadeOut(1100);
+      if (i==3) {
+        i=0;
+      }
+    };
+  </script>
+</head>
+<body>
+  <marquee scrolldelay="10"><h1> SEJARAH BERDIRINYA CHILLI KITCHEN BY PUTRI NURIFA </h1></marquee>
+    <nav class="nav-img d-none d-lg-block">
+        <ul>
+          <div id="slider">
+          <img id="sliderImage1" src="menu1.jpg" style="width: 300px; height: 300px " align="center">
+          <img id="sliderImage2" src="menu2.jpg" style="width: 300px; height: 300px " align="center">
+          <img id="sliderImage3" src="menu3.jpg" style="width: 300px; height: 300px " align="center">
+        </div>
+        </ul>
+      </nav>
+
+    <nav class="nav-menu d-none d-lg-block">
+        <center><p>Chilli Kitchen By Putri Nurifa adalah manajemen kemitraan berbasis syari'ah yang bergerak di bidang restaurant siap saji, dengan produk unggulan Ayam Geprek, Ayam Goreng Tepung, Ayam Penyet, Steak dan Nasi goreng, dengan konsep menyajikan makanan yang sehat, berkualitas, halal dengan cita rasa yang khas.
+        Bentuk manajemen kemitraan yang kami tawarkan antara lain : Franchais free, Bagi hasil 30% manajemen dan 70% mitra dari profit laba, Investasi 250-350 juta diluar sewa, BEP 36 bulan.
+        Dengan berbagai proses dan tekad mengembangkan Chilli Kitchen By Putri Nurifa, sampai sekarang store kami ada dibeberapa daerah di Jawa maupun luar Jawa.Penikmat geprek kalau makan disini gak cuma Ayam Geprek aja, namun juga ada Ayam Goreng Tepung, Ayam Penyet, ada lauk Tahu, Terong, Tempe, Jamur yang crispy banget. Sambelnya sendiri macamnya banyak banget ada sambal Bajak, sambel Bawang, sambel Korek.</p></center>
+      </nav>
+<nav class="nav-home d-none d-lg-block">
+        <ul>
+          <li><a href="index.html"><img src="back.png" style="width: 100px; height: 100px " align="center"></a></li>
+          <li><a href="Biodata.html"><img src="woman.png" style="width: 100px; height: 100px " align="center"></a></li>
+          <li><a href="menu.html"><img src="menu.png" style="width: 100px; height: 110px " align="center"></a></li>
+          <li><a href="pemesanan.html"><img src="cashier.png" style="width: 100px; height: 100px " align="center"></a></li>
+        </ul>
+      </nav>
+      <div id="map" style="width:100%;height:400px;"></div>
+    <script>
+      function initMap() {
+        var lombok = {lat: -8.5830695, lng: 116.3202515};
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 9,
+          center: lombok
+        });
+        var contentString = '<h2>Hello Dunia!</h2>';
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString,
+          position: lombok
+        });
+        infowindow.open(map);
+        var marker = new google.maps.Marker({
+          position: lombok,
+          map: map,
+          title: "Pulau Lombok"
+        });
+        google.maps.event.addDomListener(window, 'load', initMap);
+
+          // tampilkan info window di atas marker
+          infowindow.open(map, marker);
+        
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+    </script>
+
+
+          <footer>&copy; 2020 | Design By Putri Nurifa Firdausia</footer>
+        
+</body>
+</html>

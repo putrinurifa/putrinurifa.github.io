@@ -1,0 +1,44 @@
+body {
+  font-family: "Open Sans";
+  background: blanchedalmond;
+  color: black;
+}
+a {
+  color: #cda45e;
+}
+
+a:hover {
+  color: #d9ba85;
+  text-decoration: none;
+}
+
+.nav-home ul {
+  margin: 10px;
+  padding-top: 200px;
+  list-style: none;
+}
+
+.nav-home > ul {
+  display: flex;
+  align-items: center;
+}
+
+.nav-home > ul > li {
+  white-space: nowrap;
+  padding-left: 200px;
+}
+footer{
+    padding-top: 20px;
+    margin:0;
+    width: 100%;
+    color: black;
+    text-align: center;
+
+}
+footer a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
